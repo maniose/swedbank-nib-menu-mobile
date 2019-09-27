@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Swedbank Sans Medium";
+    src: url("font/SwedbankSans-Medium.ttf") format('truetype');
+}
+* {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+	font-family: "Swedbank Sans Medium";
+	background-color: grey;
+}
+body {
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	background-color: white;
+}
+#gradient {
+	height: 8px;
+	background-image: linear-gradient(90deg, #FA7F25 0%, #FDBE13 100%);
+}
+header {
+	display: block;
+	height: 80px;
+	color: white;
+	border-bottom: 1px solid #EBE7E2;
+	flex-shrink: 0;
+}
+#main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+}
+header .logo {
+	height: 50%;
+	margin: 16px 0 0 50px;
+}
+nav {
+	width: 250px;
+	border-right: 1px solid #EBE7E2;
+	flex-shrink: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+nav input {
+	display: none;
+}
+nav label {
+	color: #493C3B;
+	font-weight: 500;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 24px center;
+	padding-left: 64px;
+	line-height: 46px;
+	flex-grow: 1;
+	width: 100%;
+	cursor: pointer;
+}
+nav a {
+	text-decoration: none;
+	color: #493C3B;
+	font-weight: 500;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 24px center;
+	padding-left: 64px;
+	line-height: 46px;
+	flex-grow: 1;
+	width: 100%;
+}
+nav .icon {
+	margin-right: 16px;
+}
+nav ul li {
+ display: flex;
+ align-items: flex-start;
+ flex-direction: column;
+ width: 100%;
+}
+nav li:hover {
+  cursor: pointer;
+}
+nav input[type=checkbox]:checked ~ label,
+nav input[type=checkbox]:checked ~ ul {
+	background-color: rgba(235, 231, 226, 0.3);
+}
+nav input[type=checkbox]:not(:checked) ~ ul {
+	height: 0;
+	overflow: hidden;
+}
+#content {
+	flex-grow: 1;
+	padding: 24px 0 0 46px;
+}
+nav li.active {
+	background-color: #FBF2EA;
+}
+nav ul li.active ul {
+	visibility: visible;
+	opacity: 1;
+	position: initial;
+	box-shadow: none;
+	background-color: transparent;
+	margin-top: 0;
+	width: 100%;
+}
+nav ul li.active {
+	flex-direction: column;
+	align-items: flex-start;
+	height: auto;
+}
+nav ul li ul li a {
+	padding-left: 64px;
+	width: 100%;
+}
+/*Ugly double line hack, sorry :(*/
+a.twolinehack {
+	line-height: 23px;
+}
